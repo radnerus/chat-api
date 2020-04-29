@@ -1,5 +1,5 @@
-const port = PORT || 4000;
-const client = require('socket.io').listen(PORT).sockets;
+const port = process.env.PORT || 4000;
+const client = require('socket.io').listen(port).sockets;
 const Chat = require('./db/ChatSchema');
 const User = require('./db/UserSchema');
 const connect = require('./db/dbconnection');
